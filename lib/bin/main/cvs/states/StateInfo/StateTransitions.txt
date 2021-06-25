@@ -1,0 +1,47 @@
+state: MainMenu
+code: M
+desc: The starting menu of the game
+prev:
+next: Character Bag Gacha Story Challenge Social Exit
+
+state: Character
+code: Cr
+desc: View all characters and adjust party setup
+prev: MainMenu
+next: 
+
+state: Bag
+code: B
+desc: View your inventory
+prev: MainMenu
+next: 
+
+state: Gacha
+code: G
+desc: Roll gacha for characters and impression weapons
+prev: MainMenu
+next: 
+
+state: Story
+code: St
+desc: Complete the Crossing Void story campaign
+prev: MainMenu
+next: 
+
+state: Challenge
+code: Ch
+desc: Take part in various challenges in the Void
+prev: MainMenu
+next: 
+
+state: Social
+code: So
+desc: Interact with your guild and fellow void agents
+prev: MainMenu
+next: 
+
+state: Exit
+code: E
+desc: Exit the application
+prev: MainMenu
+next: 
