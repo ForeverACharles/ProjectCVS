@@ -40,7 +40,8 @@ javafx {
 }
 
 application {
-	mainClassName = 'org.openjfx.MainApp'                                                                                                                                                                                                                                                              mainClass = 'org.openjfx.MainApp'
+	mainClassName = 'org.openjfx.MainApp'
+	                                                                                                                                                                                                                                                          mainClass = 'org.openjfx.MainApp'
 }
 
 java 
