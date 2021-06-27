@@ -2,21 +2,12 @@ package cvs.app;
 
 import java.io.*;
 import java.util.*;
-import cvs.states.*;
-import javafx.application.*;
-import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
+import cvs.state.*;
 
-public class CVSdriver extends Application {
+public class CVSdriver {
 
 	public static boolean devMode = false;
 	public static GameState currentState;
-	
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		FXMLLoader loader = new FXMLLoader();
-		
-	}
 	
 	public static void printInfo(String statement)
 	{

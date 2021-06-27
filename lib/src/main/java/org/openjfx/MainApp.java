@@ -1,10 +1,13 @@
-package cvs.app;
+package org.openjfx;
 
-import cvs.states.GameState;
-import javafx.application.*;
+import cvs.app.CVSdriver;
+import cvs.state.GameState;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 
-public class CVSlaunch {
-
+public class MainApp extends Application {
+	
 	public static void main(String[] args)
 	{
 		CVSdriver.printInfo("Starting Crossing Void Simulator...\n");
@@ -20,6 +23,13 @@ public class CVSlaunch {
 		CVSdriver.currentState = CVSdriver.selectMode(mainMenuState);
 	
 		CVSdriver.printInfo("\nEntering " + CVSdriver.currentState.getName() + "...\n");
-		Application.launch(CVSdriver.class);
+		launch();
+	}
+	
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		FXMLLoader loader = new FXMLLoader();
+		System.exit(0);
+		
 	}
 }

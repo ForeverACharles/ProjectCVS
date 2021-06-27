@@ -1,4 +1,4 @@
-package cvs.states;
+package cvs.state;
 
 import cvs.app.*;
 import java.io.*;
@@ -20,7 +20,7 @@ public class GameState
 	private void loadStateInfo(String stateName, GameState prev)
 	{
 		File stateFile;
-		String filePath = "src\\main\\java\\cvs\\states\\StateInfo\\StateTransitions.txt";
+		String filePath = "src\\main\\resources\\states\\StateTransitions.txt";
 		Scanner Scan;
 		try 
 		{

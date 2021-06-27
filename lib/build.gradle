@@ -30,29 +30,44 @@ dependencies {
     //AnimateFX for animating JavaFX stuff
     implementation group: 'io.github.typhon0', name: 'AnimateFX', version: '1.2.2'
     // https://github.com/Typhon0/AnimateFX
+    
+    implementation group: 'org.testfx', name: 'testfx-core', version: '4.0.16-alpha'
 }
 
 javafx {
     version = "16"
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.media', 'javafx.graphics']
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']
+    
 }
 
 application {
-	mainClassName = 'cvs.app.CVSdriver'
-	mainModule.set("cvs.app")
+	mainClassName = 'org.openjfx.MainApp'
+	                                                                                                                                                                                                                                                              mainClass = 'org.openjfx.MainApp'
 }
 
-compileJava {
-    doFirst {
-        options.compilerArgs = [
-                '--module-path', classpath.asPath,
-                '--add-modules', 'javafx.controls,javafx.fxml,javafx.media,javafx.graphics'
-        ]
-        println options.compilerArgs
-    }
+java 
+{
+	  modularity.inferModulePath.set(true)
 }
+
+run
+{
+  	standardInput = System.in			//enable standard input from terminal
+  	systemProperty 'arg', System.getProperty('arg')
+}
+
+compileTestJava
+{
+	moduleOptions
+	{
+		addModules = ['org.junit.jupiter']		//enables unit testing
+	}
+}
+
 
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+
 

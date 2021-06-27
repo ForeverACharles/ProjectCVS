@@ -1,6 +1,6 @@
 package cvs.tests;
 
-import cvs.states.*;
+import cvs.state.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
