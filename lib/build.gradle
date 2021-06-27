@@ -36,13 +36,11 @@ dependencies {
 
 javafx {
     version = "16"
-    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']
-    
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']  
 }
 
 application {
-	mainClassName = 'org.openjfx.MainApp'
-	                                                                                                                                                                                                                                                              mainClass = 'org.openjfx.MainApp'
+	mainClassName = 'org.openjfx.MainApp'                                                                                                                                                                                                                                                              mainClass = 'org.openjfx.MainApp'
 }
 
 java 
@@ -53,7 +51,6 @@ java
 run
 {
   	standardInput = System.in			//enable standard input from terminal
-  	systemProperty 'arg', System.getProperty('arg')
 }
 
 compileTestJava
