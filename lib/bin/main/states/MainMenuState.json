@@ -1,0 +1,17 @@
+{
+	"state": "Main Menu",
+	"code": "M",
+	"desc": "View all characters and adjust party setup",
+	"prev": null,
+	"next": 
+	[	
+		"User Info",
+		"Character",
+		"Bag",
+		"Gacha",
+		"Story",
+		"Challenge",
+		"Social",
+		"Exit"
+	]
+}
