@@ -11,5 +11,6 @@ class StateTester
 	{
 		GameState testState = new GameState("MainMenu", null);
 		assertTrue(testState.testJsonParser(), "the 'testJsonParser' method worked");
+		System.out.println("it worked?");
 	}
 }

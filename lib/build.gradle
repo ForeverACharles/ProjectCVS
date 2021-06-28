@@ -46,7 +46,7 @@ application {
 
 java 
 {
-	  modularity.inferModulePath.set(true)
+	  //modularity.inferModulePath.set(true)
 }
 
 run
@@ -58,7 +58,16 @@ compileTestJava
 {
 	moduleOptions
 	{
-		addModules = ['org.junit.jupiter']		//enables unit testing
+		//enables unit testing (neccesary)
+		addModules = 
+		[
+			'com.fasterxml.jackson.core', 
+			'com.fasterxml.jackson.databind',
+			'org.junit.jupiter',
+			'javafx.fxml',
+			'javafx.controls',
+			'javafx.media'
+		]		
 	}
 }
 

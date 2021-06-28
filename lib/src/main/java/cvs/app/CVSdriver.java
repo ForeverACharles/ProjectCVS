@@ -9,6 +9,11 @@ public class CVSdriver {
 	public static boolean devMode = false;
 	public static GameState currentState;
 	
+	public static void print(String statement)
+	{
+		System.out.print(statement);
+	}
+	
 	public static void printInfo(String statement)
 	{
 		System.out.println(statement);

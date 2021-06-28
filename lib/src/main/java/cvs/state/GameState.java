@@ -153,6 +153,7 @@ public class GameState
 		do
 		{
 			CVSdriver.printInfo(" " + inputMessage);
+			CVSdriver.print(" ");
 			inputState = Scan.nextLine();
 			returnState = getState(inputState);
 		} while(returnState == null);

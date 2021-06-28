@@ -14,7 +14,6 @@ public class JsonTester {
 		try
 		{
 			JsonNode test = JsonHandler.getNode("name: charles");
-			JsonNode control = new JsonNode();
 		}
 		catch(IOException e)
 		{

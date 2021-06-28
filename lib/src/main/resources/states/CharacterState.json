@@ -1,0 +1,10 @@
+{
+	"state": "Character",
+	"code": "Cr",
+	"desc": "View your characters and adjust your party setup",
+	"prev": "MainMenu",
+	"next": 
+	[
+	
+	]
+}

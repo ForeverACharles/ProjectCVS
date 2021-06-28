@@ -1,0 +1,10 @@
+{
+	"state": "UserInfo",
+	"code": "UI",
+	"desc": "View your player profile",
+	"prev": "MainMenu",
+	"next": 
+	[
+	
+	]
+}
