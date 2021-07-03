@@ -5,7 +5,7 @@
 	"prev": null,
 	"next": 
 	[	
-		"UserInfo",
+		"UserProfile",
 		"Character",
 		"Bag",
 		"Gacha",

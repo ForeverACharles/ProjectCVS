@@ -14,10 +14,12 @@ public class GameState
 	
 	public GameState(String stateName, GameState prev)
 	{
-		loadStateInfo(stateName, prev);
+		//loadStateInfoFromTxt(stateName, prev);
+		loadStateInfoFromJson(stateName);
 		printStateInfo();
 	}
-	private void loadStateInfo(String stateName, GameState prev)
+	
+	private void loadStateInfoFromTxt(String stateName, GameState prev)
 	{
 		File stateFile;
 		String filePath = "src\\main\\resources\\states\\StateTransitions.txt";
@@ -81,6 +83,11 @@ public class GameState
 		}
 		Scan.close();
 	} 
+	
+	public static GameState loadStateInfoFromJson(String stateName)
+	{
+		return null;
+	}
 	
 	public String getName()	{	return stateName;	}
 	
@@ -173,10 +180,4 @@ public class GameState
 		}
 		return null;
 	}
-	
-	public boolean testJsonParser()
-	{
-		return true;
-	}
-	
 }

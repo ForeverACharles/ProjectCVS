@@ -1,7 +1,7 @@
 module lib 
 {
 	requires com.fasterxml.jackson.core;
-	requires com.fasterxml.jackson.databind;
+	requires transitive com.fasterxml.jackson.databind;
 	requires javafx.graphics;
 	requires javafx.fxml;
 	requires javafx.controls;

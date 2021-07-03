@@ -1,6 +1,6 @@
 {
-	"state": "UserInfo",
-	"code": "UI",
+	"state": "AgentProfile",
+	"code": "AP",
 	"desc": "View your player profile",
 	"prev": "MainMenu",
 	"next": 

@@ -1,0 +1,10 @@
+{
+	"state": "Bag",
+	"code": "B",
+	"desc": "View your inventory",
+	"prev": "MainMenu",
+	"next": 
+	[
+	
+	]
+}

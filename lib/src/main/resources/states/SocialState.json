@@ -1,0 +1,10 @@
+{
+	"state": "Social",
+	"code": "So",
+	"desc": "Interact with guilds and fellow void agents",
+	"prev": "MainMenu",
+	"next": 
+	[
+	
+	]
+}

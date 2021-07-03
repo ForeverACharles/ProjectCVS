@@ -1,0 +1,10 @@
+{
+	"state": "Exit",
+	"code": "E",
+	"desc": "Exit the application",
+	"prev": "MainMenu",
+	"next": 
+	[
+	
+	]
+}

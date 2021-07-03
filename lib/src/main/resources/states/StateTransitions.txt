@@ -30,13 +30,13 @@ next:
 
 state: Challenge
 code: Ch
-desc: Take part in various challenges in the Void
+desc: Take on various challenges in the Void
 prev: MainMenu
 next: 
 
 state: Social
 code: So
-desc: Interact with your guild and fellow void agents
+desc: Interact guilds and fellow void agents
 prev: MainMenu
 next: 
 

@@ -1,0 +1,10 @@
+{
+	"state": "Gacha",
+	"code": "G",
+	"desc": "Roll gacha for characters and impression weapons",
+	"prev": "MainMenu",
+	"next": 
+	[
+	
+	]
+}

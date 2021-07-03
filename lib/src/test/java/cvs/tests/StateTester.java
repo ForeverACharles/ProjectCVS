@@ -7,10 +7,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class StateTester 
 {
 	@Test
-	void testStateJsonParsing()
+	void testStateJsonLoading()
 	{
 		GameState testState = new GameState("MainMenu", null);
-		assertTrue(testState.testJsonParser(), "the 'testJsonParser' method worked");
-		System.out.println("it worked?");
+		
+		GameState methodTest = GameState.loadStateInfoFromJson("MainMenu");
+		
+		//assertEquals(testState, methodTest);
 	}
 }
