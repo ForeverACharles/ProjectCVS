@@ -1,0 +1,37 @@
+{
+  "name" : "TestState",
+  "code" : "TS",
+  "desc" : "Testing, testing... 1,2 ",
+  "prevState" : null,
+  "nextStates" : [ {
+    "name" : "next1",
+    "code" : "n1",
+    "desc" : "1",
+    "prevState" : null,
+    "nextStates" : [ ]
+  }, {
+    "name" : "next2",
+    "code" : "n2",
+    "desc" : "2",
+    "prevState" : null,
+    "nextStates" : [ ]
+  }, {
+    "name" : "next3",
+    "code" : "n3",
+    "desc" : "3",
+    "prevState" : null,
+    "nextStates" : [ ]
+  }, {
+    "name" : "next4",
+    "code" : "n4",
+    "desc" : "4",
+    "prevState" : "TestState",
+    "nextStates" : [ ]
+  }, {
+    "name" : "next5",
+    "code" : "n5",
+    "desc" : "5",
+    "prevState" : "TestState",
+    "nextStates" : [ ]
+  } ]
+}

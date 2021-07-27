@@ -1,11 +1,11 @@
 {
 	"state": "MainMenu",
-	"code": "M",
-	"desc": "View all characters and adjust party setup",
+	"code": "MM",
+	"desc": "The starting menu of the game",
 	"prev": null,
 	"next": 
-	[	
-		"UserProfile",
+	[
+		"AgentProfile",
 		"Character",
 		"Bag",
 		"Gacha",

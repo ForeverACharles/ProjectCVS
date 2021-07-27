@@ -18,9 +18,10 @@ public class MainApp extends Application {
 		CVSdriver.printDebug("Loading MainMenu state information...");		
 		
 		//bring up the mode select screen for GUI
-		GameState mainMenuState = new GameState("MainMenu", null);
+		//GameState mainMenuState = new GameState("MainMenu", null);
+		GameState MainMenuState = GameState.getStateFromStorage("MainMenu");
 		
-		CVSdriver.currentState = CVSdriver.selectMode(mainMenuState);
+		CVSdriver.currentState = CVSdriver.selectMode(MainMenuState);
 	
 		CVSdriver.printInfo("\nEntering " + CVSdriver.currentState.getName() + "...\n");
 		launch();
@@ -30,6 +31,5 @@ public class MainApp extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader();
 		System.exit(0);
-		
 	}
 }

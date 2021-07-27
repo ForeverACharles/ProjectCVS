@@ -4,19 +4,44 @@ import cvs.app.*;
 import java.io.*;
 import java.util.*;
 
-public class GameState 
+import com.fasterxml.jackson.annotation.*;
+
+@JsonIdentityInfo(
+		generator = ObjectIdGenerators.PropertyGenerator.class,
+		property = "name"
+		)
+@JsonPropertyOrder({ "name", "code", "desc", "prevState", "nextStates"})
+public class GameState extends BaseObject
 {
+	private static final String directory = "src\\main\\resources\\states\\";
+	
 	private String stateName;
 	private String code;
 	private String description;
-	private GameState prevState = null;
+	private GameState prevState;
 	private List<GameState> nextStates = new ArrayList<GameState>();
 	
 	public GameState(String stateName, GameState prev)
 	{
-		//loadStateInfoFromTxt(stateName, prev);
-		loadStateInfoFromJson(stateName);
+		loadStateInfoFromTxt(stateName, prev);
 		printStateInfo();
+	}
+	
+	public GameState(String stateName, String code, String description, GameState prevState, List<GameState> nextStates)
+	{
+		//loadStateInfoFromTxt(stateName, prev);
+		
+		//loadStateInfoFromJson(stateName, directory);
+		
+		this.stateName = stateName;
+		this.code = code;
+		this.description = description;
+		this.prevState = prevState;
+		setNextStates(nextStates);
+		
+		writeObjectToJson(this, directory, stateName, "State");
+		
+		//printStateInfo();
 	}
 	
 	private void loadStateInfoFromTxt(String stateName, GameState prev)
@@ -84,9 +109,9 @@ public class GameState
 		Scan.close();
 	} 
 	
-	public static GameState loadStateInfoFromJson(String stateName)
+	public static GameState getStateFromStorage(String stateName)
 	{
-		return null;
+		return getObjectFromStorage(GameState.class, directory, stateName, "State");
 	}
 	
 	public String getName()	{	return stateName;	}
@@ -100,13 +125,24 @@ public class GameState
 	public void setPrevState(GameState newState) 
 	{	
 		prevState = newState;
+		//writeObjectToJson(this, directory, stateName, "State");
 	}
 	
 	public List<GameState> getNextStates()	{	return nextStates;	}
 	
-	public void setNextStates(List<GameState> nextStates)	
+	public void setNextStates(List<GameState> nextStates)
 	{
-		this.nextStates = nextStates;
+		if(nextStates != null)
+		{
+			this.nextStates.addAll(nextStates);
+		}
+		//writeObjectToJson(this, directory, stateName, "State");
+	}
+	
+	public void addNextState(GameState nextState)
+	{
+		nextStates.add(nextState);
+		//writeObjectToJson(this, directory, stateName, "State");
 	}
 	
 	public void printStateInfo()
@@ -152,6 +188,18 @@ public class GameState
 		CVSdriver.printInfo(" -----------------------------------");
 	}
 	
+	public GameState getState(String stateName)
+	{
+		for(GameState nextState : nextStates)
+		{
+			if(nextState.getName().equals(stateName) || nextState.getCode().equals(stateName))
+			{
+				return nextState;
+			}
+		}
+		return null;
+	}
+	
 	public GameState getStateTransitionInput(String inputMessage)
 	{
 		String inputState = "";
@@ -167,17 +215,12 @@ public class GameState
 		
 		Scan.close();
 		return returnState;
+	}	
+	
+	public static void createState()
+	{
+		Scanner Scan = new Scanner(System.in);
+		CVSdriver.printInfo("");
 	}
 	
-	public GameState getState(String stateName)
-	{
-		for(GameState nextState : nextStates)
-		{
-			if(nextState.getName().equals(stateName) || nextState.getCode().equals(stateName))
-			{
-				return nextState;
-			}
-		}
-		return null;
-	}
 }
